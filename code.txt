@@ -1,0 +1,102 @@
+HTML CODE--------------------------------------------------------------------------------
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+    <title>My Gallery</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>My collection</h1>
+        <p>This gallery is made responsive using css flex-box property.</p>
+        <a class="code-link" href="https://www.dropbox.com/s/vw3p1af8o9efcic/code.txt?dl=0" target="_blank">Code Link</a>
+    </div>
+    <div class="gallery-flex-container">
+        <div class="column">
+            <img src="/images/1.jpg" alt="1">
+            <img src="/images/2.jpg" alt="2">
+            <img src="/images/3.jpg" alt="3">
+            <img src="/images/10.jpg" alt="1">
+            <img src="/images/16.jpg" alt="5">
+        </div>
+        <div class="column">
+            <img src="/images/4.jpg" alt="4">
+            <img src="/images/11.jpg" alt="2">
+            <img src="/images/14.jpg" alt="3">
+            <img src="/images/15.jpg" alt="4">
+            <img src="/images/6.jpg" alt="5">
+        </div>
+        <div class="column">
+            <img src="/images/12.jpg" alt="4">
+            <img src="/images/7.jpg" alt="1">
+            <img src="/images/8.jpg" alt="2">
+            <img src="/images/9.jpg" alt="3">
+            <img src="/images/5.jpg" alt="5">
+        </div>
+    </div>
+
+     <div class="footer">
+        <h1>Dhanyavad </h1>
+    </div>
+
+</body>
+</html>
+
+
+CSS CODE-------------------------------------------------------------------------
+*{
+    font-family: 'Fredoka', sans-serif;
+    box-sizing: border-box;
+}
+.heading {
+    padding: 20px;
+    text-align: center;
+}
+
+.code-link {
+    text-decoration: none;
+    color: rgb(231, 127, 0);
+}
+
+.column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+.gallery-flex-container > .column > img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.gallery-flex-container {
+    display: flex;
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    padding: 0 4px;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .gallery-flex-container {
+        width: 90%; 
+    }
+}

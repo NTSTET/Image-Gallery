@@ -1,0 +1,151 @@
+CSS Flex Container
+
+.flex-container {
+  display: flex;
+}
+
+
+The flex container properties are:
+
+flex-direction: row|row-reverse|column|column-reverse;
+flex-wrap: wrap|nowrap|wrap-reverse;
+flex-flow: row wrap;	/* shorthand of direc and wrap */
+justify-content: center|flex-start|flex-end|space-around|space-between;
+align-items: center|flex-start|flex-end|stretch|baseline;
+align-content: space-between|space-around|stretch|center|flex-start|flex-end;
+
+/* for align-content, set flex-war: wrap to see the effect */
+
+Perfect Centering
+
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center; /**/
+  align-items: center;	   /**/
+}
+
+
+CSS Flex Items
+
+<div class="flex-container">
+  <div>1</div> <!-- flex item -->
+  <div>2</div> <!-- flex item -->
+  <div>3</div> <!-- flex item -->
+  <div>4</div> <!-- flex item -->
+</div>
+
+
+The flex item properties are:
+
+order: 1|2|3|4....;
+
+	<div class="flex-container">
+  		<div style="order: 3">1</div>
+  		<div style="order: 2">2</div>
+  		<div style="order: 4">3</div>
+  		<div style="order: 1">4</div>
+	</div>
+
+flex-grow:0(default)|1|2|3...;
+
+	how much a flex item will grow relative to the rest of 	the flex items.
+		<div class="flex-container">
+  			<div style="flex-grow: 1">1</div>
+  			<div style="flex-grow: 1">2</div>
+  			<div style="flex-grow: 8">3</div>
+		</div>
+
+flex-shrink:0|1(default)|2|3|4|5.....;
+
+	how much a flex item will shrink relative to the rest 	of the flex items.
+		<div class="flex-container">
+  			<div>1</div>
+  			<div>2</div>
+  			<div style="flex-shrink: 0">3</div>
+  			<div>4</div>
+  			<div>5</div>
+  			<div>6</div>
+  			<div>7</div>
+  			<div>8</div>
+  			<div>9</div>
+  			<div>10</div>
+		</div>
+
+flex-basis: 200px;
+
+	specifies the initial length of a flex item.
+		<div class="flex-container">
+  			<div>1</div>
+  			<div>2</div>
+  			<div style="flex-basis: 200px">3</div>
+  			<div>4</div>
+		</div>
+
+flex: 0 0 200px;
+
+	shorthand property for the flex-grow, flex-shrink, and 	flex-basis properties.
+		<div class="flex-container">
+  			<div>1</div>
+  			<div>2</div>
+  			<div style="flex: 0 0 200px">3</div>
+  			<div>4</div>
+		</div>
+
+align-self: center|flex-start|flex-end|stretch|baseline;
+
+	specifies the alignment for the selected item inside 	the flexible container.
+	The align-self property overrides the default alignment 	set by the container's align-items property.
+		
+		<div class="flex-container">
+  			<div>1</div>
+  			<div>2</div>
+  			<div style="align-self: center">3</div>
+  			<div>4</div>
+		</div>
+
+
+
+CSS Flex Responsive
+
+For example, if you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), you can change the flex-direction from row to column at a specific breakpoint (800px in the example below):
+
+Another way is to change the percentage of the flex property of the flex items to create different layouts for different screen sizes. Note that we also have to include flex-wrap: wrap; on the flex container for this example to work:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

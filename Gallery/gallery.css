@@ -1,0 +1,50 @@
+*{
+    font-family: 'Fredoka', sans-serif;
+    box-sizing: border-box;
+}
+.heading {
+    padding: 20px;
+    text-align: center;
+}
+
+.code-link {
+    text-decoration: none;
+    color: rgb(231, 127, 0);
+}
+
+.column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+.gallery-flex-container > .column > img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.gallery-flex-container {
+    display: flex;
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    padding: 0 4px;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .gallery-flex-container {
+        width: 90%; 
+    }
+}
